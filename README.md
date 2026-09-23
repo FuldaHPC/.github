@@ -16,6 +16,7 @@ All repositories sit side by side on one level. There are no nested folders or s
 | `workshop`  | `workshop-<event><year>`                   | `workshop-amte26`                  | `workshop`, `<event>`, `<year>`                          |
 | `proposal`  | `proposal-<funding-org><year>-<slug>`      | `proposal-dfg26-adaptive-resources`| `proposal`, `<funding-org>`, `<year>`, `<research-area>` |
 | `grant`     | `grant-<funding-org><year>-<slug>`         | `grant-dfg27-adaptive-resources`   | `grant`, `<funding-org>`, `<year>`, `<research-area>`    |
+| `code`      | `code-<slug>`                              | `code-elastisim-node-shutdown`     | `code`, `<research-area>`                                |
 | `tool`      | `tool-<slug>`                              | `tool-edumpi`                      | `tool`, `<research-area>`                                |
 | `topic`     | `topic-<slug>`                             | `topic-mpi-sessions`               | `topic`, `<research-area>`                               |
 | `teaching`  | `teaching-<course>-<semester>-<slug>`      | `teaching-pp-ws26-exercises`       | `teaching`, `<course>`, `<semester>`, `<research-area>`  |
@@ -29,11 +30,27 @@ All repositories sit side by side on one level. There are no nested folders or s
 
 **Notes on categories**
 
+- `code` is for ongoing internal development: prototypes, extensions of external software, and experiments with code that is not yet tied to a paper or released. When work matures, it moves on: a snapshot for a paper goes into `artifact-*`, a released and maintained piece of software becomes `tool-*` (rename the repository; GitHub redirects old URLs).
 - `tool` is for long-lived software that outlives any single paper (e.g., research tools, teaching systems). Paper-specific code belongs in `artifact-*`.
 - `workshop` is for workshops we organize: CFP, website sources, program, and organizational material. Review content never goes into these repositories.
 - `infra` is for configuration and deployment of systems we operate (teaching clusters, GPU servers, platforms for students).
 - `template` is for reusable starting points (thesis, meeting logs, AI rules). Mark these repositories as GitHub template repositories where possible.
 - `misc` is the last resort. If several `misc-*` repositories share a purpose, give them their own category.
+
+### `code` vs. `tool`
+
+The difference is not the code itself but what the repository promises to others:
+
+|               | `code-*`                          | `tool-*`                                    |
+| ------------- | --------------------------------- | ------------------------------------------- |
+| Audience      | the group itself                  | external users                              |
+| State         | work in progress, may be broken   | usable, documented, with install instructions |
+| Interface     | changes at any time               | stable, with versioned releases             |
+| Visibility    | usually private                   | usually public                              |
+
+**Rule of thumb:** Would you tell someone outside the group "take this and use it"? If yes, it is a `tool`; if not, it is `code`.
+
+A repository typically moves from `code-*` to `tool-*` with its first release or when a paper presents it as a tool.
 
 ## 2. Naming Rules
 
@@ -50,7 +67,7 @@ Keeping names this uniform makes them easy to filter, script against, and archiv
 **Categories**
 
 ```
-paper | artifact | benchmark | talk | poster | workshop | proposal | grant | tool | topic | teaching | infra | template | protocol | cv | travel | misc
+paper | artifact | benchmark | talk | poster | workshop | proposal | grant | code | tool | topic | teaching | infra | template | protocol | cv | travel | misc
 ```
 
 **`<venue>`**: acronym of a conference or journal.
@@ -208,3 +225,7 @@ The scheme is meant to:
 - replace implicit knowledge and ad-hoc names with explicit rules
 
 When a repository doesn't fit, we change the scheme, not the repository.
+
+---
+
+<sub>Structure adapted from the organization README of [ums-cpl](https://github.com/ums-cpl) (University of Münster).</sub>
