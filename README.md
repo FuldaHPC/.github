@@ -19,8 +19,8 @@ All repositories sit side by side on one level. There are no nested folders or s
 | `code`      | `code-<slug>`                              | `code-elastisim-node-shutdown`     | `code`, `<research-area>`                                |
 | `tool`      | `tool-<slug>`                              | `tool-edumpi`                      | `tool`, `<research-area>`                                |
 | `topic`     | `topic-<slug>`                             | `topic-mpi-sessions`               | `topic`, `<research-area>`                               |
-| `teaching`  | `teaching-<course>-<semester>-<slug>`      | `teaching-pp-ws26-exercises`       | `teaching`, `<course>`, `<semester>`, `<research-area>`  |
-| `teaching`  | `teaching-<thesis>-<year>-<name>`          | `teaching-ma-26-jane-doe`          | `teaching`, `<thesis>`, `<year>`, `<research-area>`      |
+| `teaching`  | `teaching-<semester>-<course>-<slug>`      | `teaching-ws26-pp-exercises`       | `teaching`, `<semester>`, `<course>`, `<research-area>`  |
+| `teaching`  | `teaching-<semester>-<thesis>-<name>`      | `teaching-ws26-ma-jane-doe`        | `teaching`, `<semester>`, `<thesis>`, `<research-area>`  |
 | `infra`     | `infra-<slug>`                             | `infra-linuxlab`                   | `infra`                                                  |
 | `protocol`  | `protocol-<date>-<slug>`                   | `protocol-2026-11-04-dfg-kickoff`  | `protocol`, `<date>`, `<research-area>`                  |
 | `cv`        | `cv-<name>`                                | `cv-jane-doe`                      | `cv`                                                     |
@@ -88,10 +88,10 @@ sc, isc, europar, amte, pmbs, eesp, sc-src
 dfg, bmftr, hmwk, eu, hsf
 ```
 
-**`<course>`**: course acronym as used internally.
+**`<course>`**: course acronym or format as used internally.
 
 ```
-pp, hpc, llm-agents
+pp, hpc, llm-agents, rp
 ```
 
 **`<semester>`**: `ssYY` (summer) or `wsYY` (winter).
